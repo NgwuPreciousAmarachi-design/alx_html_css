@@ -1,0 +1,119 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --max-width: 1000px;
+    --primary-color: #FF6565;
+    --text-color: white;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+/* CONTAINER (centers content) */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    width: 90%;
+}
+
+/* HEADER */
+.header {
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    width: 150px;
+}
+
+/* NAVIGATION */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* HOVER STATE */
+.nav a:hover,
+.nav a:active {
+    color: var(--primary-color);
+}
+
+/* HERO SECTION */
+.hero {
+    height: 90vh;
+    background-image: url("images/headphones_hero_1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+/* BUTTON */
+.cta-btn {
+    background-color: var(--primary-color);
+    padding: 12px 30px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* BUTTON HOVER */
+.cta-btn:hover,
+.cta-btn:active {
+    opacity: 0.9;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+    .nav ul {
+        display: none; /* will be replaced by hamburger menu in Task 8 */
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}s
