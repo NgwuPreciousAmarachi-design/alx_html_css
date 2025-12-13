@@ -1,119 +1,197 @@
-/* RESET CSS */
-* {
+/*
+ * --------------------------------
+ * GLOBAL SETUP: Reset, Fonts, Variables
+ * --------------------------------
+ */
+
+/* 1. CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* VARIABLES */
+/* 2. Custom Fonts */
+/* Ensure you have Source Sans Pro font files in your 'fonts/' folder */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('./fonts/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('./fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* 3. CSS Variables */
 :root {
+    --color-primary: #FF6565;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-dark: #292929;
+    
+    --font-family-primary: 'Source Sans Pro', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    
     --max-width: 1000px;
-    --primary-color: #FF6565;
-    --text-color: white;
 }
 
-/* BODY */
+/* 4. Base & Global Styles (Same as before) */
 body {
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-white);
+    line-height: 1.5;
 }
 
-/* CONTAINER (centers content) */
 .container {
     max-width: var(--max-width);
-    margin: auto;
-    width: 90%;
-}
-
-/* HEADER */
-.header {
-    padding: 20px 0;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* LOGO */
-.logo {
-    width: 150px;
-}
-
-/* NAVIGATION */
-.nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 16px;
-}
-
-/* HOVER STATE */
-.nav a:hover,
-.nav a:active {
-    color: var(--primary-color);
-}
-
-/* HERO SECTION */
-.hero {
-    height: 90vh;
-    background-image: url("images/headphones_hero_1.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-.hero-text h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.hero-text p {
-    margin-bottom: 25px;
-    font-size: 18px;
-}
-
-/* BUTTON */
-.cta-btn {
-    background-color: var(--primary-color);
-    padding: 12px 30px;
-    color: var(--text-color);
+a {
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+    color: var(--color-white);
+    transition: color 0.3s, opacity 0.3s;
 }
 
-/* BUTTON HOVER */
-.cta-btn:hover,
-.cta-btn:active {
+/* Interaction: links hover/active */
+a:hover, a:active {
+    color: var(--color-primary);
+}
+
+.button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: var(--font-weight-semi-bold);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+/* Interaction: button hover/active */
+.button:hover, .button:active {
     opacity: 0.9;
 }
 
-/* RESPONSIVE DESIGN */
+
+/*
+ * --------------------------------
+ * TASK 1: HEADER & HERO STYLES
+ * --------------------------------
+ */
+
+.hero {
+    /* USING YOUR EXACT FILENAME (adjust extension if needed) */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('./images/headphones_hero_1.jpg') no-repeat center center / cover;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* Navigation Bar (Desktop) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.menu-toggle, .menu-icon-container {
+    display: none;
+}
+
+/* Hero Content Styling */
+.hero-content {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    margin-bottom: 40px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    font-weight: var(--font-weight-semi-bold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 16px;
+    font-weight: var(--font-weight-semi-bold);
+    margin-bottom: 40px;
+}
+
+.hero-body {
+    font-size: 16px;
+    margin-top: 50px;
+    font-weight: var(--font-weight-regular);
+}
+
+/* Media Query for Mobile Layout (480px or less) */
 @media (max-width: 480px) {
-    .nav ul {
-        display: none; /* will be replaced by hamburger menu in Task 8 */
+    
+    .hero {
+        min-height: 600px;
+    }
+
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     .logo {
-        width: 120px;
+        order: 2;
     }
 
-    .hero-text h1 {
-        font-size: 26px;
+    .nav-links {
+        display: none;
     }
 
-    .hero-text p {
-        font-size: 16px;
+    .container {
+        padding: 0 10px;
     }
-}s
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content h2 {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-body {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+}
