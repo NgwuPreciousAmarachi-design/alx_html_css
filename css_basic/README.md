@@ -1,16 +1,26 @@
-# css_basic
+CSS Basics - ALX Frontend Project
+This project covers the fundamentals of CSS, including:
 
-This folder contains the CSS basic project for ALX Front-End Web Development.
+Learning Objectives
+What CSS is
+How to add style to HTML elements
+What classes and selectors are
+How to compute CSS specificity
+Box model properties in CSS
+How the browser loads a webpage
+Project Structure
+index.html – Homepage
+tweets.html – Tweets page
+styles.css – Main stylesheet
+base.css – Base styles
+Requirements
+No external libraries (No Bootstrap, No React, etc.)
+HTML and CSS must be W3C compliant
+All files must end with a new line
+Code must pass W3C validation
+Author
+Ikegwuonu Ebuka Remmy
 
-## Files
-
-- `index.html` – main homepage
-- `tweets.html` – tweets showcase page
-- `base.css` – ALX provided base CSS
-- `styles.css` – custom CSS for the project
-
-## Instructions
-
-- Both HTML files link to `base.css` first, then `styles.css`.
-- Files should end with a new line.
-- This project uses only HTML, CSS, and JS (no external frameworks).
+GitHub: https://github.com/Ebukaremmy
+Email: ngwupreciousa@gmail.com
+LinkedIn: https://www.linkedin.com/in/ebuka-ikegwuonu-145186352                

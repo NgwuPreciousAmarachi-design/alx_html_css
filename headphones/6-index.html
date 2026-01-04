@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Headphones</title>
+  <link rel="stylesheet" href="6-styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo_headphones.png" alt="Headphones logo">
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#what">what we do</a></li>
+          <li><a href="#results">our results</a></li>
+          <li><a href="#contact">contact us</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu-btn" class="menu-icon" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <a href="#what">what we do</a>
+    <a href="#results">our results</a>
+    <a href="#contact">contact us</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" role="banner" aria-label="Hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+      <p class="hero-sub">Lorem ipsum dolor sit amet lorem ipsum dolor set</p>
+      <a href="#contact" class="hero-btn">CALL TO ACTION</a>
+
+      <p class="hero-desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section id="what" class="what-we-do">
+    <div class="container">
+      <h2>What we do...</h2>
+      <p class="subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <div class="services">
+        <div class="service-item">
+          <div class="service-icon">🎵</div>
+          <h3>Lorem ipsum</h3>
+          <p>Consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">🎬</div>
+          <h3>Lorem ipsum</h3>
+          <p>Consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">🎵</div>
+          <h3>Lorem ipsum</h3>
+          <p>Consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">👂</div>
+          <h3>Lorem ipsum</h3>
+          <p>Consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

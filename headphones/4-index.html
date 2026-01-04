@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Headphones</title>
+  <link rel="stylesheet" href="4-styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo_headphones.png" alt="Headphones logo">
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#what">what we do</a></li>
+          <li><a href="#results">our results</a></li>
+          <li><a href="#contact">contact us</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu-btn" class="menu-icon" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <a href="#what">what we do</a>
+    <a href="#results">our results</a>
+    <a href="#contact">contact us</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" role="banner" aria-label="Hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+      <p class="hero-sub">Lorem ipsum dolor sit amet lorem ipsum dolor set</p>
+      <a href="#contact" class="hero-btn">CALL TO ACTION</a>
+
+      <p class="hero-desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section id="what" class="what-we-do">
+    <div class="container">
+      <h2>What we do...</h2>
+      <p class="subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <div class="services">
+        <div class="service-item">
+          <div class="service-icon">🎵</div>
+          <h3>Lorem ipsum</h3>
+          <p>Consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">🎬</div>
+          <h3>Lorem ipsum</h3>
+          <p>Consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">🎵</div>
+          <h3>Lorem ipsum</h3>
+          <p>Consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">👂</div>
+          <h3>Lorem ipsum</h3>
+          <p>Consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="results">
+    <div class="container results-content">
+      <h2>Our results speak for themselves</h2>
+      <p class="results-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt 
+        similique adipisci velit.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">+2%</div>
+          <div class="stat-label">lorem ipsum dolor</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-value">+2%</div>
+          <div class="stat-label">lorem ipsum dolor</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-value">+2%</div>
+          <div class="stat-label">lorem ipsum dolor</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-value">+2%</div>
+          <div class="stat-label">lorem ipsum dolor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact us</h2>
+
+      <form class="contact-form" novalidate>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+
+        <button type="submit" class="form-btn">CALL TO ACTION</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="images/logo2.png" class="footer-logo" alt="Headphones logo">
+      <div class="socials">
+        <a href="#" aria-label="Facebook">◉</a>
+        <a href="#" aria-label="Twitter">◉</a>
+        <a href="#" aria-label="Instagram">◉</a>
+      </div>
+    </div>
+    <p class="copyright">© Headphones 2025</p>
+  </footer>
+</body>
+</html>

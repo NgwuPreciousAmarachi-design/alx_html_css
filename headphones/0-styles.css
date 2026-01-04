@@ -1,0 +1,145 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --max-width: 1000px;
+    --text-light: #ffffff;
+    --pink: #FF6565;
+    --dark-bg: #071629;
+    --font: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background: #ffffff;
+}
+
+/* CONTAINER */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav ul li a:hover,
+.nav ul li a:active {
+    color: var(--pink);
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: url("images/logo.png") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: var(--text-light);
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    background: var(--pink);
+    padding: 15px 40px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.hero-btn:hover,
+.hero-btn:active {
+    opacity: 0.9;
+}
+
+.hero-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+/* ----------------------- */
+/* RESPONSIVE (≤ 480px)    */
+/* ----------------------- */
+@media screen and (max-width: 480px) {
+
+    .nav ul {
+        display: none;  /* Full nav hidden for future hamburger menu (Task 8) */
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
